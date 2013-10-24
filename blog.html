@@ -1,0 +1,241 @@
+<!DOCTYPE HTML>
+
+<html>
+
+	<head>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+		<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
+
+		<title>Blog | Rand Seay</title>
+
+		<link rel="shortcut icon" href="images/favicon.ico"/>
+
+		<link rel="stylesheet" href="css/min.style.css" type="text/css" media="screen"/>
+
+		<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,600' rel='stylesheet' type='text/css'/>
+
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'/>
+
+	</head>
+
+	<!-- BODY -->
+
+	<body id="page-top">
+
+		 <!-- HEADER -->
+
+		<div class="container">
+
+			<!-- LOGO -->
+				
+			<div class="grid_6 alpha logo-btn">
+
+				<a href="index.html">
+
+					<img class="logo" src="images/2013-logo-big.svg" alt="Logo" />
+
+				</a>
+
+			</div>
+
+			<!-- NAVIGATION -->
+
+			<nav class="grid_6 omega">
+
+				<a class="about" href="about.html">About</a>
+
+				<a class="work" href="work.html">Work</a>
+				
+				<a class="blog current" href="blog.html">Blog</a>
+				
+				<a class="contact" href="contact.html">Contact</a>
+
+			</nav>
+
+			<!-- HEADLINE -->
+
+			<section class="intro grid_12">
+
+				<h1>Keep up with me&hellip;</h1>
+
+				<p class="grid_8 alpha">Although this blog is not focused on one specific thing, you should be able to piece together a more complete image of who I am. I will try to keep it mostly about design, web development, marketing, and my other professional interests, but there will doubtless be other parts of me that emerge in it. If that's not something you are interested in, you should know I'm not too concerned whether you read it or not.</p>
+
+				<a class="intro-btn grid_4 omega" href="contact.html">
+
+					<p>Get ahold of&nbsp;me</p>
+
+					<img src="images/intro-symbols/contact-symbol.svg" alt="Contact Symbol" />
+
+				</a>
+
+			</section>
+
+		</div> <!-- END HEADER -->
+
+		<!-- CONTENT: BLOG POST -->
+
+		<section class="main-content bg-lgray" id="post3">
+
+			<div class="container clearfix">
+
+				<h4>August 20, 2013</h4>
+
+				<h2>Why SVGs Should Be Your First Choice</h2>
+
+				<p>As a graphic designer with plenty of print experience, The <em>first</em> thing I reach for when I need a visual element is a vector-based file. If there are none to be had, something inside of me sighs sadly as I settle for a pixelled fallback. Here's why.</p>
+
+				<p>Pixel-based files rely on a level of quality that is built into them, represented as a density. It comes down to how many dots (or pixels) we can cram into a certain area. The higher that number, the better the quality, and the larger the image can be before it begins to break down and look bad. Usually a good rule of thumb is 300 dpi for print. At this level it is generally agreed that the naked eye cannot detect the individual dots, and the image looks crisp. A vector graphic, on the other hand, utilizes geometrical primitives such as points, lines, curves, and shapes &mdash;which are all mathematical expressions&mdash; to represent images. The level of quality is no longer built into the file, and is only limited by the output capabilities of the printer. In the world of print, this is wonderful. I can put a logo on the side of an airplane using the same vector file that is on the business card. All without losing an ounce of clarity.</p>
+
+				<p>Here's the big point &mdash;the exact same concept holds true in the web development world, where pixels have ruled since the beginning time. Pixels are the comfort zone, but the future of the web is not pixel-friendly. Any given visual element needs to be viewed in a multitude of sizes and shapes. Meet the SVG (Scalable Vector Graphic), your new best friend. You can see <a target="_blank" href="http://caniuse.com/svg">here</a> that support for the svg is better than ever before, and will only continue to improve. In a world where displays are not only varying greatly in size, but becoming far more powerful (think retina), pixels are less and less suited to keep up. If you have poked around my site, you can see that I have used SVGs wherever possible, taking major steps in future-proofing it. Honestly, they are not as cut and dry to work with right now, but with resources like Chris Coyier's articles about <a target="_blank" href="http://css-tricks.com/using-svg/">using SVGs</a> and <a target="_blank" href="http://css-tricks.com/svg-fallbacks/">SVG fallbacks</a>, as well as the W3C <a target="blank" href="http://www.w3.org/TR/SVG/Overview.html">Recommendation</a>, there are definitely ways to learn.</p>
+
+				<h5>Here are some quick reasons why SVGs are a good idea</h5>
+
+				<ul>
+
+					<li><strong>Resolution Independent.</strong> (Bye-Bye pixel density)</li>
+
+					<li><strong>Relatively small file size.</strong> (Depending on the complexity of the graphic.)</li>
+
+					<li><strong>Compresses well.</strong> (.svgz file format)</li>
+
+					<li><strong>Great for responsive design.</strong> (Scales beautifully.)</li>
+
+					<li><strong>Insanely customizable.</strong> (Select with CSS, transitions, and much more that we can't talk about now.)</li>
+
+				</ul>
+
+				<p>I should note that rasterized file formats do have a ligitimate place in web development &mdash;I hope that was understood above. However, many designers and developers would do well to incorporate vector-based file formats (such as the SVG) into their work flow wherever possible. </p>
+
+			</div>
+
+		</section> <!-- END BLOG POST -->
+
+		<!-- CONTENT: BLOG POST -->
+
+		<section class="main-content bg-white" id="post2">
+
+			<div class="container clearfix">
+
+				<h4>August 17, 2013</h4>
+
+				<h2>It's Dumb Not to Use Smart Guides in InDesign, Illustrator</h2>
+
+				<p>If you have spent any amount of time using InDesign or Illustrator, I guarantee you have wanted to line up the edges of two (or more) elements. This is one of the most fundamental uses of the program. I want a box. I want a rectangle. I want them the same height and I want them next to each other. Maybe it's a photo or text box or <em>anything</em> else. Honestly you might not care, and if that's you, there is no need to read further. But for all of you who do care &mdash;that is, the sensible designers who are probably employed&mdash;you have a few options.</p>
+
+				<ol>
+
+					<li><strong>Panic.</strong> (Sadly, this is always an option.)</li>
+
+					<li><strong>Eyeball it.</strong> (I'll zoom in <em>real</em> close and line it up. No one will notice anyway.)</li>
+
+					<li><strong>Use a white box.</strong> (Well it has a straight edge, and its the same color as the paper.)</li>
+
+					<li><strong>Use Smart Guides.</strong> (Duh.)</li>
+
+				</ol>
+
+				<p><em>Just press cmd-U.</em></p>
+
+				<p>I promise it is really worth it. If you aren't big on the keyboard shortcuts, you can go to View > Grids & Guides > Smart Guides. (In Illustrator it is View > Smart Guides). Your world just got easier. Not only can you create new elements that are lined up or share dimensions, but you can space them evenly, snap them to the page center (or vertical or horizontal centerlines), apply a consistent rotation angle, and many more time-saving and <em>accurate</em> things.</p>
+
+				<p>Using Smart Guides is so easy that it is dumb not to. Sure, I may turn them off occasionally, but only when they aren't doing what I need them two or are snapping me to something I don't want to snap to. This happen very rarely, and I always turn them back on afterwards. Please don't mess up your layouts and designs with white boxes anymore.</p>
+
+			</div>
+
+		</section> <!-- END BLOG POST -->
+
+		<!-- CONTENT: BLOG POST -->
+
+		<section class="main-content bg-gray"id="post1">
+
+			<div class="container clearfix">
+
+				<h4>June 25, 2013</h4>
+
+				<h2>Let's Just Get Started...</h2>
+
+				<p>I have been interested in blogging for a while, but have never gathered the gumption to start &mdash;and it is beginning to dawn on my why. I felt I needed to have my thoughts and topics more gathered together and planned out, like I needed more preparation or a plan before I could start blogging in the way I wanted. You might guess that holding this mentality slows things down a bit, and you would be right. I think some of the graphic designer in me is constantly in a &ldquo;never quite finished&rdquo; state-of-mind, but blaming it on that is a bit too easy. Honestly I think part of me usually wants to come across as polished and well-thought-out. You may see that as a bit of a theme from here on in.</p>
+
+				<p>I think there is something good about my desire to be well-thought-out and put together, but sometimes it turns into a desire to <em>appear</em> that way even when I am not, and that is when things get a bit murky. I think my sister Alys (see her blog <a target="_blank" href="http://alysseay.theworldrace.org/">here</a>) called it “wearing your cape backwards.” People have wonderful qualities that become a bit warped in this fallen world. These things we sort of hide behind or use when we feel insecure.</p>
+
+				<p>When I thought about writing a blog, I envisioned it could be a vast library of articles in which a person could find great thoughts on every topic under the sun, but that is not what I am going to shoot for. There are more important things than that, and I don’t think we can get to the more important things by aiming for them. So I guess let’s just get started…</p>
+
+				<a class="grid_12 top-btn" href="#page-top">Back to top</a>
+
+			</div>
+
+		</section> <!-- END BLOG POST -->
+
+		<!-- FOOTER -->
+
+		<section class="container">
+			
+			<ul class="icon-btn">
+				
+				<li>
+					
+					<a target="_blank" href="https://www.facebook.com/rand.seay">
+
+						<img src="images/social-icons/icon-fb.svg" alt="Facebook Icon" />
+
+					</a>
+
+				</li>
+
+				<li>
+
+					<a target="_blank" href="https://twitter.com/randseay">
+
+						<img src="images/social-icons/icon-tw.svg" alt="Twitter Icon" />
+
+					</a>
+
+				</li>
+
+				<li>
+
+					<a target="_blank" href="https://www.linkedin.com/pub/rand-seay/68/81/846/">
+
+						<img src="images/social-icons/icon-in.svg" alt="Linked In Icon" />
+
+					</a>
+
+				</li>
+
+				<li>
+
+					<a target="_blank" href="mailto:rand.seay@gmail.com" title="Send me an email at rand.seay@gmail.com">
+
+						<img src="images/social-icons/icon-em.svg" alt="Email Icon" />
+
+					</a>
+
+				</li>
+
+				<li>
+
+					<a target="_blank" href="images/Resume-Aug2013.pdf">
+
+						<img src="images/social-icons/icon-res.svg" alt="Resume Icon" />
+
+					</a>
+
+				</li>
+
+			</ul>
+
+		</section> <!-- END FOOTER CONTAINER -->
+
+		<!-- SCRIPTS -->
+
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		
+		<script src="swipebox/source/jquery.swipebox.js"></script>
+
+		<script src="js/script.js"></script>
+
+	</body>
+
+</html>
