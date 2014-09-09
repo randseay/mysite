@@ -29,7 +29,7 @@
 		<div class="container">
 
 			<!-- LOGO -->
-				
+
 			<div class="grid_6 alpha logo-btn">
 
 				<a href="index.html">
@@ -47,9 +47,9 @@
 				<a class="about" href="about.html">About</a>
 
 				<a class="work" href="work.html">Work</a>
-				
+
 				<a class="blog current" href="blog.html">Blog</a>
-				
+
 				<a class="contact" href="contact.html">Contact</a>
 
 			</nav>
@@ -76,7 +76,133 @@
 
 		<!-- CONTENT: BLOG POST -->
 
-		<section class="main-content bg-lgray" id="post3">
+		<section class="main-content bg-lgray" id="post4">
+
+			<div class="container clearfix">
+
+				<h4>September 8, 2014</h4>
+
+				<h2>A Modern Workflow with Grunt, Sass, and SVGs</h2>
+
+				<p>We are right in the middle of building a web app at <a target="_blank" href="http://www.skoshinteractive.com">Skosh Interactive</a>. It was mere splash page and newsletter signup that needed to grow into Flask app with quite a few feature –and ideally be mobile-friendly. Because our own front-end framework is not yet ready for the big leagues, we decided on <a target="_blank" href="http://foundation.zurb.com">Foundation</a> –with sass, of course. And svgs (I might be a little addicted, sue me).</p>
+
+				<p>I had just stumbled across a <a target="_blank" href="http://css-tricks.com/video-screencasts/screencast-134-tour-site-progress-built-jekyll-grunt-sass-svg-system/">screencast by Chris Coyier</a>, and I was fired up about implementing a modern workflow. So I branched off and dove in. I tried to plan out all of the packages I would need and which tools I wanted to incorporate. It was <code>npm install</code> this and <code>npm install</code> that. The project is private right now, but the <code>devDependencies</code> section of my <code>package.json</code> file looked like this.</p>
+
+				<pre>
+					<code>
+"devDependencies": {
+  "grunt": "~0.4.2",
+  "grunt-autoprefixer": "~0.8.2",
+  "grunt-contrib-copy": "^0.5.0",
+  "grunt-contrib-imagemin": "^0.8.0",
+  "grunt-contrib-uglify": "~0.2.7",
+  "grunt-contrib-watch": "~0.5.3",
+  "grunt-newer": "^0.7.0",
+  "grunt-sass": "^0.14.1",
+  "grunt-shell": "^1.0.1",
+  "grunt-svgstore": "~0.3.0",
+  "load-grunt-tasks": "~0.2.1",
+  "node-sass": "^0.9.3"
+}
+					</code>
+				</pre>
+
+				<h5>Styles (Sass and Foundation)</h5>
+
+				<p>With these tools installed, the next step was configuring Grunt to do my bidding.  I ended up creating a task that handles all of the styles for the project. It compiles my sass files, autoprefixes them, and compiles my customized version of Foundation. Here are the various sections of the <code>Gruntfile</code> that dealth with the styles.</p>
+
+				<pre>
+					<code>
+sass: {
+  options: {
+    includePaths: ["bower_components/foundation/scss"]
+  },
+  global: {
+    options: {
+      outputStyle: "compressed"
+    },
+    files: {
+      "path/to/global.min.css": "path/to/global.scss"
+    }
+  },
+  foundation: {
+    options: {
+      outputStyle: "compressed"
+    },
+    files: {
+      "path/to/foundation.min.custom.css": "path/to/foundation-custom.scss"
+    }
+  }
+},
+
+autoprefixer: {
+  global: {
+    src: "path/to/global.min.css"
+  }
+},
+					</code>
+				</pre>
+
+				<p>The <code>foundation-custom.scss</code> file is a sass file that I created that contains just a few lines. It sits next to the <code>_foundation-settings.scss</code> file, which is simply a copy of the foundation settings file that I customize as I work. After importing <code>normalize.scss</code> and the settings, it finds the rest of Foundation's Sass files.</p>
+
+				<pre>
+					<code>
+// Import all of the application components.
+@import
+  "path/to/bower_components/foundation/scss/normalize.scss",
+  "_foundation-settings.scss",
+  "path/to/bower_components/foundation/scss/foundation.scss";
+					</code>
+				</pre>
+
+				<h5>SVG System</h5>
+
+				<p>The other slick system I wanted to get working was the <code>svgstore</code> system that creates and utilizes svg sprites. I place all of my svg files in an <code>svg</code> directory, and it grabs them all and embeds it into my html in a hidden location. From there, I can reference any svg I would like, and it displays it where I need it. The setup is as follows.</p>
+
+				<pre>
+					<code>
+svgstore: {
+  options: {
+    prefix : "shape-",
+    cleanup: false,
+    symbol: {
+      preserveAspectRatio: "xMidyMid meet",
+      width: "100%"
+    },
+    svg: {
+      style: "display: none;"
+    }
+  },
+  default: {
+    files: {
+      "path/to/svg/svg-defs.svg": ["path/to/svg/*.svg"]
+    }
+  }
+},
+					</code>
+				</pre>
+
+				<p>The HTML looks a little bit like this.</p>
+
+				<pre>
+					<code>
+&lt;!-- This is where the svgs are placed, hidden --&gt;
+&lt;div id="svg-defs"&gt;&lt;/div&gt;
+
+&lt;!-- This is how you reference and display one of the svgs --&gt;
+&lt;svg&gt;&lt;use xlink:href="#name-of-shape" /&gt;&lt;/svg&gt;
+					</code>
+				</pre>
+
+				<p>This is just a little glimpse of what is starting to emerge out of the "modern" workflow that I desired to put in place. The rest of the tasks move files where they need to be, optimizes images, and generally keeps things tidy. It is tough to go into great detail without giving you an entire tour of the project, but perhaps there will be more to come.</p>
+
+			</div>
+
+		</section> <!-- END BLOG POST -->
+
+		<!-- CONTENT: BLOG POST -->
+
+		<section class="main-content bg-white" id="post3">
 
 			<div class="container clearfix">
 
@@ -114,7 +240,7 @@
 
 		<!-- CONTENT: BLOG POST -->
 
-		<section class="main-content bg-white" id="post2">
+		<section class="main-content bg-gray" id="post2">
 
 			<div class="container clearfix">
 
@@ -148,7 +274,7 @@
 
 		<!-- CONTENT: BLOG POST -->
 
-		<section class="main-content bg-gray"id="post1">
+		<section class="main-content bg-white"id="post1">
 
 			<div class="container clearfix">
 
@@ -171,11 +297,11 @@
 		<!-- FOOTER -->
 
 		<section class="container">
-			
+
 			<ul class="icon-btn">
-				
+
 				<li>
-					
+
 					<a target="_blank" href="https://www.facebook.com/rand.seay">
 
 						<img src="images/social-icons/icon-fb.svg" alt="Facebook Icon" />
@@ -231,7 +357,7 @@
 		<!-- SCRIPTS -->
 
 		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-		
+
 		<script src="swipebox/source/jquery.swipebox.js"></script>
 
 		<script src="js/script.js"></script>
